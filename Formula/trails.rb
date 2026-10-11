@@ -1,8 +1,8 @@
 class Trails < Formula
   desc "Pick, rejoin and restore AI coding agents running in tmux"
   homepage "https://github.com/gunasekar/trails"
-  url "https://github.com/gunasekar/trails/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "6f62195a8a1ea57cd77bcd8a58ab84b6acf2486a257dd1dc47451dc068f2140c"
+  url "https://github.com/gunasekar/trails/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "31595d3c669c197646555ebded4b45e9610ad17b8c372b897fd94a42e6f8622b"
   license "MIT"
   head "https://github.com/gunasekar/trails.git", branch: "main"
 
@@ -12,6 +12,17 @@ class Trails < Formula
 
   def install
     bin.install "bin/trails"
+    (pkgshare/"swiftbar").install Dir["extras/swiftbar/*"]
+  end
+
+  def caveats
+    return unless OS.mac?
+
+    <<~EOS
+      trails ships a SwiftBar menu-bar plugin. With SwiftBar installed
+      (brew install --cask swiftbar) and a plugin folder chosen, run:
+        trails swiftbar
+    EOS
   end
 
   test do
