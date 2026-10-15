@@ -1,8 +1,8 @@
 class Trails < Formula
-  desc "Pick, rejoin and restore AI coding agents running in tmux"
+  desc "Run AI coding agents in tmux, grouped by workspace, reachable from any editor"
   homepage "https://github.com/gunasekar/trails"
-  url "https://github.com/gunasekar/trails/archive/refs/tags/v0.6.1.tar.gz"
-  sha256 "0b315bf1ba64890cd7330a3c78ab2d1dd2dde9e12f910b9fceac9ae568bac70e"
+  url "https://github.com/gunasekar/trails/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "c8a64b23da0edc67ed2a34242562facd1460d97ea0372f61c7ffb34607487028"
   license "MIT"
   head "https://github.com/gunasekar/trails.git", branch: "main"
 
