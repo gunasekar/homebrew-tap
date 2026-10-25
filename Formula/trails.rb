@@ -1,8 +1,8 @@
 class Trails < Formula
   desc "Run AI coding agents in tmux, grouped by workspace, reachable from any editor"
   homepage "https://github.com/gunasekar/trails"
-  url "https://github.com/gunasekar/trails/archive/refs/tags/v1.9.0.tar.gz"
-  sha256 "52145d36cce04d0f591538adbccf8f041d3c0a6dce49b33ae14f779195362a6c"
+  url "https://github.com/gunasekar/trails/archive/refs/tags/v1.9.1.tar.gz"
+  sha256 "a69f87f2ed7c38dc828872a042f75ec02151f3bf653a0151bf9acf0cba4bbc9e"
   license "MIT"
   head "https://github.com/gunasekar/trails.git", branch: "main"
 
@@ -16,12 +16,12 @@ class Trails < Formula
 
   # The tmux server, outside any terminal: brew services start trails (see trails help).
   service do
-    run [opt_bin/"trails", "server"]
+    run [opt_bin/"trails", "boot"]
     keep_alive true
     restart_delay 10
     process_type :interactive
-    log_path var/"log/trails-server.log"
-    error_log_path var/"log/trails-server.log"
+    log_path var/"log/trails-boot.log"
+    error_log_path var/"log/trails-boot.log"
   end
 
   def caveats
