@@ -1,8 +1,8 @@
 class Trails < Formula
   desc "Run AI coding agents in tmux, grouped by workspace, reachable from any editor"
   homepage "https://github.com/gunasekar/trails"
-  url "https://github.com/gunasekar/trails/archive/refs/tags/v1.18.1.tar.gz"
-  sha256 "944776ce71a94138d26ac7ec8dc98a1a44175872e447305434590a3c188d5475"
+  url "https://github.com/gunasekar/trails/archive/refs/tags/v1.19.0.tar.gz"
+  sha256 "bfcf708e49725655ea12febd09c5132ba1660ddc317971019ed76509ea173b1d"
   license "MIT"
   head "https://github.com/gunasekar/trails.git", branch: "main"
 
