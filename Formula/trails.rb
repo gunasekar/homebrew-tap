@@ -1,8 +1,8 @@
 class Trails < Formula
   desc "Run AI coding agents in tmux, grouped by workspace, reachable from any editor"
   homepage "https://github.com/gunasekar/trails"
-  url "https://github.com/gunasekar/trails/archive/refs/tags/v1.21.1.tar.gz"
-  sha256 "7c622a121cb838bc3af5ff9372f1f70f189b4b98a338b1b2919e2674607d5ba4"
+  url "https://github.com/gunasekar/trails/archive/refs/tags/v1.22.0.tar.gz"
+  sha256 "779249b867bd8c3979ea5025c0ee13a7791b76fbadf9cb992cd2ab61cd88f668"
   license "MIT"
   head "https://github.com/gunasekar/trails.git", branch: "main"
 
@@ -26,7 +26,7 @@ class Trails < Formula
 
   def caveats
     <<~EOS
-      trails diff (prefix G from trails keys) shows a codebase's changes side
+      trails diff (prefix G from trails tmux-config) shows a codebase's changes side
       by side with delta when it is installed, and as plain git output
       without it. For side by side:
         brew install git-delta
