@@ -1,8 +1,8 @@
 class Trails < Formula
   desc "Run AI coding agents in tmux, grouped by workspace, reachable from any editor"
   homepage "https://github.com/gunasekar/trails"
-  url "https://github.com/gunasekar/trails/archive/refs/tags/v1.22.0.tar.gz"
-  sha256 "779249b867bd8c3979ea5025c0ee13a7791b76fbadf9cb992cd2ab61cd88f668"
+  url "https://github.com/gunasekar/trails/archive/refs/tags/v1.23.0.tar.gz"
+  sha256 "a8c366601c72199860d52d450c4dd9318fe12d6549c0afa45a7345ca8d9cccd2"
   license "MIT"
   head "https://github.com/gunasekar/trails.git", branch: "main"
 
@@ -26,10 +26,11 @@ class Trails < Formula
 
   def caveats
     <<~EOS
-      trails diff (prefix G from trails tmux-config) shows a codebase's changes side
-      by side with delta when it is installed, and as plain git output
-      without it. For side by side:
-        brew install git-delta
+      trails diff (prefix G from trails tmux-config) shows a live diff in Hunk:
+        brew install hunk
+
+      On tmux 3.8 or later, prefix followed by backtick opens a native floating
+      pane. Reload the Trails server's tmux configuration after upgrading.
 
       To keep the tmux server outside any terminal, so a Force Quit of one
       can't take your agents with it, and bring lost trails back on start:
