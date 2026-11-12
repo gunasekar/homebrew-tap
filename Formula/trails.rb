@@ -1,8 +1,8 @@
 class Trails < Formula
   desc "Run AI coding agents in tmux, grouped by workspace, reachable from any editor"
   homepage "https://github.com/gunasekar/trails"
-  url "https://github.com/gunasekar/trails/archive/refs/tags/v1.23.2.tar.gz"
-  sha256 "7e9627fbe059085b6dd401f59757d31e676dc198b238e22cf97b64af1acf935f"
+  url "https://github.com/gunasekar/trails/archive/refs/tags/v1.24.1.tar.gz"
+  sha256 "1ad9d0e9a6bd91d4d19d253606613d01e05a6aefb80ff0f65345079a87333fb3"
   license "MIT"
   head "https://github.com/gunasekar/trails.git", branch: "main"
 
@@ -26,8 +26,11 @@ class Trails < Formula
 
   def caveats
     <<~EOS
-      trails diff (prefix G from trails tmux-config) shows a live diff in Hunk:
+      trails diff (prefix H from trails tmux-config) shows a live diff in Hunk:
         brew install hunk
+
+      trails git (prefix G) opens lazygit in a popup:
+        brew install lazygit
 
       On tmux 3.8 or later, prefix followed by backtick opens a native floating
       pane. Reload the Trails server's tmux configuration after upgrading.
